@@ -7,6 +7,7 @@ export const removeLowFavorite = () => {
       "div[data-testid='like']"
     )
 
+    if (!favoriteEl) return
     if (favoriteNumber(favoriteEl.innerText) < 500) {
       el.style.display = "none"
     }
