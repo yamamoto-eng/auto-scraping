@@ -4,7 +4,7 @@ export const removeLowFavorite = () => {
 
   Array.from(articleElList).forEach((el) => {
     const favoriteEl: HTMLDivElement = el.querySelector(
-      ".icon-favorite-toggle.like-count"
+      "div[data-testid='like']"
     )
 
     if (favoriteNumber(favoriteEl.innerText) < 500) {
