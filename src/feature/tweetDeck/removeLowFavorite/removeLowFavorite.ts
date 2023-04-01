@@ -8,14 +8,14 @@ export const removeLowFavorite = () => {
     )
 
     if (!favoriteEl) return
-    if (favoriteNumber(favoriteEl.innerText) < 500) {
+    if (favoriteNumber(favoriteEl.innerText) < 1000) {
       el.style.display = "none"
     }
   })
 }
 
 const favoriteNumber = (str: string) => {
-  const number = parseInt(str)
+  const number = parseInt(str.replace(",", ""))
 
   if (str.includes("k")) {
     return number * 1000
